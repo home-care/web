@@ -1,0 +1,23 @@
+<h1>Dashboard - Settings</h1>
+<a href="/user/dashboard">Back to dashboard</a>
+<h2>Add a contact</h2>
+<form action="/user/settings/update" method="POST" class="form form--block">
+  <label for="contact-person-name">Contact person name</label>
+  <input type="text" name="contact-person-name" id="contact-person-name" />
+  <label for="contact-person-number">Contact person number</label>
+  <input type="tel" name="contact-person-number" id="contact-person-number" />
+  <label for="contact-person-method">
+    Contact persons preferred contact method
+  </label>
+  <select name="contact-person-method" id="contact-person-method">
+    <option value="SMS">Text message</option>
+  </select>
+  <button type="submit">Add contact person</button>
+</form>
+<h2>Contacts list</h2>
+<dl>
+  {{#each contacts }}
+  <dd>{{ this.contact_name }}</dd>
+  <dt>{{ this.contact_number }}</dt>
+  {{/each}}
+</dl>

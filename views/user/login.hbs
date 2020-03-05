@@ -1,0 +1,61 @@
+<!-- Container (login Section) -->
+<span
+  class="text-black wide1 display-topmiddle2 center hide-small"
+  style="white-space:nowrap;"
+  ><h1 class="xxxlarge">HOME CARE</h1></span
+>
+
+<span
+  class="text-black display-topmiddle3 wide center hide-large"
+  style="white-space:nowrap;"
+  ><h2>HOME CARE</h2></span
+>
+
+<form action="/user/login" method="POST">
+  <br />
+  <div class="hide-small">
+    <h1 class="center text-colora">
+      <br /><i class="fas fa-sign-in-alt">&nbsp;&nbsp;</i>LOG IN
+    </h1>
+  </div>
+  <div class="hide-large">
+    <h3 class="center text-colora">
+      <br /><i class="fas fa-sign-in-alt">&nbsp;&nbsp;</i>LOG IN
+    </h3>
+  </div>
+  <p class="center">
+    USE THE LOG IN FORM BELOW TO ACCESS YOUR PERSONAL DASHBOARD
+  </p>
+  <br />
+
+  <label for="device-id">
+    Device ID
+  </label>
+  <input
+    id="device-id"
+    name="device-id"
+    type="text"
+    placeholder="e.g: 11bf5b37-e0b8-42e0-8dcf-dc8c4aefc000"
+  />
+
+  <label for="phone-number">
+    Phone number
+  </label>
+  <input
+    id="phone-number"
+    name="phone-number"
+    type="tel"
+    placeholder="e.g.: +441244396847"
+  />
+
+  <a class="register" href="/user/sign-up">Register</a>
+
+  <input type="submit" name="submit" value="LOG IN" />
+</form>
+
+<div class="center">
+  <a class="" href="/"
+    ><i class="fas fa-arrow-left">&nbsp;&nbsp;</i>BACK TO HOME</a
+  >
+</div>
+<br />

@@ -1,0 +1,34 @@
+<h1>
+  Dashboard
+</h1>
+<p>
+  {{ deviceId }}
+</p>
+<p>
+  {{ phoneNumber }}
+</p>
+<form action="/user/logout" method="POST" class="form form--block">
+  <a href="/user/dashboard/settings">Settings view</a>
+  <button type="submit">
+    Logout of your account
+  </button>
+</form>
+<h2>Notification history</h2>
+<ul>
+  {{#each notifications}}
+  <li>
+    <div>
+      <strong>Sent to:</strong>
+      <span>{{ this.sent_to_name }} ({{ this.sent_to }})</span>
+    </div>
+    <div>
+      <strong>Notification type:</strong>
+      <em>{{ this.sent_message_type }}</em>
+    </div>
+    <div>
+      <strong>Message</strong>
+      <p>{{ this.sent_message }}</p>
+    </div>
+  </li>
+  {{/each}}
+</ul>
